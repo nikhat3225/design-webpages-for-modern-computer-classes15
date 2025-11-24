@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll for Paid Course</title>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(to right, #e0f7fa, #f1f8e9); margin:0; padding:0;">
+
+    <div style="max-width: 550px; margin:50px auto; background-color:#fff; border-radius:25px; box-shadow:0 15px 30px rgba(0,0,0,0.2); padding:40px;">
+        
+        <!-- Header -->
+        <h2 style="text-align:center; background: linear-gradient(to right, #6a11cb, #2575fc); -webkit-background-clip: text; color: transparent; font-size:28px; margin-bottom:30px;">
+            Enroll for Paid Course
+        </h2>
+
+        <form action="payment-success.html" method="post" style="text-align:left;">
+
+            <!-- Full Name -->
+            <label style="font-weight:bold; color:#34495e;">Full Name</label><br>
+            <input type="text" name="name" placeholder="Enter your full name" required
+                   style="width:100%; padding:14px; margin-bottom:20px; border-radius:12px; border:1px solid #ccc; transition: border 0.3s;"
+                   onfocus="this.style.borderColor='#6a11cb';" onblur="this.style.borderColor='#ccc';"><br>
+
+            <!-- Email -->
+            <label style="font-weight:bold; color:#34495e;">Email</label><br>
+            <input type="email" name="email" placeholder="Enter your email" required
+                   style="width:100%; padding:14px; margin-bottom:20px; border-radius:12px; border:1px solid #ccc; transition: border 0.3s;"
+                   onfocus="this.style.borderColor='#6a11cb';" onblur="this.style.borderColor='#ccc';"><br>
+
+            <!-- Course & Amount Selection -->
+            <label style="font-weight:bold; color:#34495e;">Select Course & Amount</label><br>
+            <select name="course_amount" required
+                    style="width:100%; padding:14px; margin-bottom:20px; border-radius:12px; border:1px solid #ccc; background-color:#f9f9f9;">
+                <option value="">--Choose a course--</option>
+                <option value="ms-office_3000">MS Office - ₹3000</option>
+                <option value="programming_6000">Programming - ₹6000</option>
+                <option value="web-designing_7000">Web Designing - ₹7000</option>
+                <option value="graphics_5000">Graphics Design - ₹5000</option>
+            </select><br>
+
+            <!-- Payment Method -->
+            <label style="font-weight:bold; color:#34495e;">Payment Method</label><br>
+            <div style="margin-bottom:30px; display:flex; gap:10px; flex-wrap:wrap;">
+                <label style="flex:1; text-align:center; cursor:pointer;">
+                    <input type="radio" name="payment_method" value="cash" required style="margin-bottom:5px;">
+                    <div style="padding:10px; border-radius:10px; background-color:#ffb74d; color:#fff;">Cash</div>
+                </label>
+                <label style="flex:1; text-align:center; cursor:pointer;">
+                    <input type="radio" name="payment_method" value="gpay" style="margin-bottom:5px;">
+                    <div style="padding:10px; border-radius:10px; background-color:#43a047; color:#fff;">GPay</div>
+                </label>
+                <label style="flex:1; text-align:center; cursor:pointer;">
+                    <input type="radio" name="payment_method" value="cardpay" style="margin-bottom:5px;">
+                    <div style="padding:10px; border-radius:10px; background-color:#1e88e5; color:#fff;">CardPay</div>
+                </label>
+                <label style="flex:1; text-align:center; cursor:pointer;">
+                    <input type="radio" name="payment_method" value="upi" style="margin-bottom:5px;">
+                    <div style="padding:10px; border-radius:10px; background-color:#8e24aa; color:#fff;">UPI</div>
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" 
+                    style="width:100%; padding:16px; background: linear-gradient(to right, #6a11cb, #2575fc); color:white; border:none; border-radius:12px; font-size:18px; cursor:pointer; transition: transform 0.3s;">
+                Pay & Enroll
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>
